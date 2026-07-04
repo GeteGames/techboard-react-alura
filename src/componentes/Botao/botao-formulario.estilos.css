@@ -1,0 +1,16 @@
+.button-form {
+  font-family: "Inter", sans-serif;
+  line-height: 120%;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  background-color: #17d9b1;
+  /* color: #212121; */
+}
+
+.button-form:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
