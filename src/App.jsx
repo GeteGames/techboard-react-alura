@@ -22,24 +22,14 @@ function App() {
       </header>
       <Banner></Banner>
       <FormularioDeEvento />
-      <section>
-        <Tema tema={temas[0]}></Tema>
-      </section>
-      <section>
-        <Tema tema={temas[1]}></Tema>
-      </section>
-      <section>
-        <Tema tema={temas[2]}></Tema>
-      </section>
-      <section>
-        <Tema tema={temas[3]}></Tema>
-      </section>
-      <section>
-        <Tema tema={temas[4]}></Tema>
-        <section>
-          <Tema tema={temas[5]}></Tema>
-        </section>
-      </section>
+      {temas.map(function (item) {
+        return (
+          <section key={item.id}>
+            <Tema tema={item}></Tema>
+          </section>
+        );
+      })}
+
     </main>
   );
 }
