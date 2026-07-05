@@ -7,9 +7,3 @@ export function ListaSuspensaFormulario() {
     </select>
   );
 }
-
-// {children.map((evento) => {
-//   return <option id={evento.id} value={evento.value}>
-//     {evento.nome}
-//   </option>;
-// })}
