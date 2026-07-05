@@ -7,10 +7,8 @@ import { ListaSuspensaFormulario } from "../ListaSuspensa";
 import { Botao } from "../Botao";
 
 export function FormularioDeEvento() {
-  const temasEventos = [
-    { nome: "Selecione uma opção", value: "", id: "" },
-    { nome: "Front End", value: "front-end", id: "front-end" },
-  ];
+
+  // { nome: "Selecione uma opção", value: "", id: "" },
 
   return (
     <form className="form-evento">
@@ -37,9 +35,8 @@ export function FormularioDeEvento() {
 
         <CampoDeFormulario>
           <Label htmlFor="temaEvento">Tema do evento</Label>
-          <ListaSuspensaFormulario>{temasEventos}</ListaSuspensaFormulario>
+          <ListaSuspensaFormulario></ListaSuspensaFormulario>
         </CampoDeFormulario>
-
         <div className="acoes">
           <Botao>Criar evento</Botao>
         </div>
