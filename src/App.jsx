@@ -16,12 +16,14 @@ function App() {
     { id: 6, nome: "cloud" },
   ];
 
-  const eventos = [{
-    capa: "https://raw.githubusercontent.com/viniciosneves/tecboard-assets/refs/heads/main/imagem_1.png",
-    tema: temas[0],
-    data: new Date(),
-    titulo: "Mulheres no Front",
-  }];
+  const eventos = [
+    {
+      capa: "https://raw.githubusercontent.com/viniciosneves/tecboard-assets/refs/heads/main/imagem_1.png",
+      tema: temas[0],
+      data: new Date(),
+      titulo: "Mulheres no Front",
+    },
+  ];
 
   return (
     <main>
@@ -29,7 +31,7 @@ function App() {
         <img src="/logo.png" alt="" />
       </header>
       <Banner></Banner>
-      <FormularioDeEvento />
+      <FormularioDeEvento temas={temas} />
       {temas.map(function (item) {
         return (
           <section key={item.id}>

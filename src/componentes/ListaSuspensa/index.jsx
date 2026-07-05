@@ -1,9 +1,23 @@
 import "./lista-formulario.estilo.css";
 
-export function ListaSuspensaFormulario() {
+export function ListaSuspensaFormulario({ itens, ...rest }) {
   return (
-    <select name="temaEvento" className="form-lista-suspensa">
-      <option></option>
+    <select
+      {...rest}
+      name="temaEvento"
+      className="form-lista-suspensa"
+      defaultValue=""
+    >
+      <option value="" disabled>
+        Selecione uma opção
+      </option>
+      {itens.map((item) => {
+        return (
+          <option key={item.id} value={item.id}>
+            {item.nome}
+          </option>
+        );
+      })}
     </select>
   );
 }
