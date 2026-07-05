@@ -4,7 +4,6 @@ export function ListaSuspensaFormulario({ itens, ...rest }) {
   return (
     <select
       {...rest}
-      name="temaEvento"
       className="form-lista-suspensa"
       defaultValue=""
     >
