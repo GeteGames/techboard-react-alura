@@ -31,7 +31,7 @@ function App() {
     // console.log("Eventos => ", eventos);
     setEventos([...eventos, evento]);
   }
-
+  // renderizacao condicional usando &&
   return (
     <main>
       <header>
@@ -39,20 +39,32 @@ function App() {
       </header>
       <Banner></Banner>
       <FormularioDeEvento temas={temas} aoSubmeter={adicionarEvento} />
-      <secntion className="container">
-        {temas.map(function (item) {
+      <section className="container">
+        {temas.map(function (tema) {
+          if (
+            !eventos.some(function (evento) {
+              return evento.tema.id === tema.id;
+            })
+          ) {
+            return null;
+          }
           return (
-            <section key={item.id}>
-              <Tema tema={item} />
+            <section key={tema.id}>
+              <Tema tema={tema} />
               <div className="eventos">
-                {eventos.map(function (item, index) {
-                  return <CardEvento evento={item} key={index} />;
-                })}
+                {eventos
+                  .filter(function (evento) {
+                    return evento.tema.id === tema.id;
+                  })
+
+                  .map(function (evento, index) {
+                    return <CardEvento evento={evento} key={index} />;
+                  })}
               </div>
             </section>
           );
         })}
-      </secntion>
+      </section>
     </main>
   );
 }
