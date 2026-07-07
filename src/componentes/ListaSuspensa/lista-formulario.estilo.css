@@ -6,8 +6,7 @@
   font-weight: 400;
   padding: 8px 16px;
   border-radius: 8px;
-  border: 1px solid var(#4a4949);
-  
+  border: 1px solid #4a4949;
 }
 
 .form-lista-suspensa option {
